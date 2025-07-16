@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Canva Pro - Get Your Link Now</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #0a092d;
+            --text-color: #e0e0e0;
+            --text-muted-color: #9ca3af;
+            --card-bg: rgba(16, 14, 58, 0.5);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --header-bg: rgba(10, 9, 45, 0.8);
+            --dropdown-bg: #110f3a;
+            --spotlight-color: rgba(142, 45, 226, 0.15);
+        }
+
+        html.light {
+            --bg-color: #f9fafb;
+            --text-color: #1f2937;
+            --text-muted-color: #4b5563;
+            --card-bg: rgba(255, 255, 255, 0.7);
+            --card-border: rgba(0, 0, 0, 0.1);
+            --header-bg: rgba(255, 255, 255, 0.8);
+            --dropdown-bg: #ffffff;
+            --spotlight-color: rgba(74, 0, 224, 0.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            position: relative;
+        }
+        
+        #spotlight {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--spotlight-color) 0%, transparent 70%);
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            transition: background 0.3s ease, width 0.3s ease, height 0.3s ease;
+            z-index: -1;
+            filter: blur(20px);
+        }
+
+        .main-gradient-text {
+            background: linear-gradient(90deg, #8e2de2, #4a00e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .main-gradient-bg {
+            background: linear-gradient(90deg, #8e2de2, #4a00e0);
+        }
+        .glow-button {
+            box-shadow: 0 0 15px 4px rgba(142, 45, 226, 0.4);
+            transition: all 0.3s ease-in-out;
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 25px 8px rgba(142, 45, 226, 0.6);
+            transform: translateY(-2px) scale(1.02);
+        }
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--card-border);
+            transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .dropdown-menu {
+            background-color: var(--dropdown-bg);
+        }
+        .lang-icon {
+            color: white;
+        }
+        html.light .lang-icon {
+            color: #1f2937;
+        }
+        #main-nav {
+            direction: ltr;
+        }
+        @keyframes progress-animation {
+            from { width: 0%; }
+            to { width: 100%; }
+        }
+        .progress-bar-animated {
+            animation: progress-animation 3s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    
+    <div id="spotlight"></div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 w-full glass-card !rounded-none !border-x-0 !border-t-0">
+        <nav id="main-nav" class="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+            <!-- Left: Theme Switcher -->
+            <div class="relative">
+                <button id="theme-menu-button" type="button" class="p-2 rounded-full hover:bg-gray-500/20 transition-colors">
+                    <svg id="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-white"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg id="theme-icon-light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hidden text-gray-800"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                <div id="theme-menu" class="dropdown-menu absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 hidden origin-top-left">
+                    <a href="#" id="theme-dark" class="block px-4 py-2 text-sm hover:bg-gray-500/20" data-translate-key="dark_mode">Dark Mode</a>
+                    <a href="#" id="theme-light" class="block px-4 py-2 text-sm hover:bg-gray-500/20" data-translate-key="light_mode">Light Mode</a>
+                </div>
+            </div>
+
+            <!-- Center: Logo -->
+            <div class="absolute left-1/2 -translate-x-1/2">
+                <a href="#">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4CDQ0vHmPqdPyIvqRJqtnviAuadQ2sGN9Z5xCsV7xwwDoLcl1sB4IkPvbVEC2sjZBbl4ENrTX657aaO-SjU2isA7VVpVywJunK8OLKl9GzvbkWz_go1denOxPPYrCVUlbU2mwz63rXEan/s1600/PicsArt_01-05-07.36.59.png" alt="AppDownDz Logo" class="h-10">
+                </a>
+            </div>
+
+            <!-- Right: Language Switcher -->
+            <div class="relative">
+                <button id="lang-menu-button" type="button" class="p-2 rounded-full hover:bg-gray-500/20 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="lang-icon"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></svg>
+                </button>
+                <div id="lang-menu" class="dropdown-menu absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 hidden origin-top-right">
+                    <!-- Language links will be added by JS -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8 md:py-16 text-center relative z-10">
+        <div class="mt-8 md:mt-12">
+            <div class="inline-block p-4 mb-4 bg-gray-800/50 rounded-full border border-purple-500/30">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="main-gradient-text"><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-4" data-translate-key="main_title">
+                Get <span class="main-gradient-text">Canva Pro</span> For Free
+            </h1>
+            <p class="text-lg md:text-xl text-muted-color max-w-2xl mx-auto" data-translate-key="main_subtitle">
+                Join millions of users and get unlimited access to all Canva Pro features with a single click.
+            </p>
+        </div>
+
+        <main>
+            <div class="my-16">
+                <button id="getLinkBtn" class="glow-button main-gradient-bg text-white font-bold text-xl md:text-2xl px-10 py-5 rounded-full shadow-lg" data-translate-key="get_link_now">
+                    Get The Link Now
+                </button>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-8" data-translate-key="why_us_title">Why Choose Us?</h2>
+                <div id="features-container" class="grid md:grid-cols-3 gap-8">
+                    <!-- Feature cards will be added by JS -->
+                </div>
+            </div>
+        </main>
+
+        <footer class="mt-20 pt-8 border-t border-gray-200 dark:border-gray-800">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://t.me/+IEl17WqC8HJiZGE0" target="_blank" class="text-gray-400 hover:text-white dark:hover:text-white transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="28" height="28" viewBox="0,0,256,256">
+                        <g fill="currentColor" fill-rule="nonzero"><g transform="scale(5.12,5.12)"><path d="M25,2c12.703,0 23,10.297 23,23c0,12.703 -10.297,23 -23,23c-12.703,0 -23,-10.297 -23,-23c0,-12.703 10.297,-23 23,-23zM32.934,34.375c0.423,-1.298 2.405,-14.234 2.65,-16.783c0.074,-0.772 -0.17,-1.285 -0.648,-1.514c-0.578,-0.278 -1.434,-0.139 -2.427,0.219c-1.362,0.491 -18.774,7.884 -19.78,8.312c-0.954,0.405 -1.856,0.847 -1.856,1.487c0,0.45 0.267,0.703 1.003,0.966c0.766,0.273 2.695,0.858 3.834,1.172c1.097,0.303 2.346,0.04 3.046,-0.395c0.742,-0.461 9.305,-6.191 9.92,-6.693c0.614,-0.502 1.104,0.141 0.602,0.644c-0.502,0.502 -6.38,6.207 -7.155,6.997c-0.941,0.959 -0.273,1.953 0.358,2.351c0.721,0.454 5.906,3.932 6.687,4.49c0.781,0.558 1.573,0.811 2.298,0.811c0.725,0 1.107,-0.955 1.468,-2.064z"></path></g></g>
+                    </svg>
+                </a>
+                <a href="https://whatsapp.com/channel/0029Vb68ArS0lwgmfAfTiq0O" target="_blank" class="text-gray-400 hover:text-white dark:hover:text-white transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="28" height="28" viewBox="0,0,256,256">
+                        <g fill="currentColor" fill-rule="nonzero"><g transform="scale(5.12,5.12)"><path d="M25,2c-12.682,0 -23,10.318 -23,23c0,3.96 1.023,7.854 2.963,11.29l-2.926,10.44c-0.096,0.343 -0.003,0.711 0.245,0.966c0.191,0.197 0.451,0.304 0.718,0.304c0.08,0 0.161,-0.01 0.24,-0.029l10.896,-2.699c3.327,1.786 7.074,2.728 10.864,2.728c12.682,0 23,-10.318 23,-23c0,-12.682 -10.318,-23 -23,-23zM36.57,33.116c-0.492,1.362 -2.852,2.605 -3.986,2.772c-1.018,0.149 -2.306,0.213 -3.72,-0.231c-0.857,-0.27 -1.957,-0.628 -3.366,-1.229c-5.923,-2.526 -9.791,-8.415 -10.087,-8.804c-0.295,-0.389 -2.411,-3.161 -2.411,-6.03c0,-2.869 1.525,-4.28 2.067,-4.864c0.542,-0.584 1.181,-0.73 1.575,-0.73c0.394,0 0.787,0.005 1.132,0.021c0.363,0.018 0.85,-0.137 1.329,1.001c0.492,1.168 1.673,4.037 1.819,4.33c0.148,0.292 0.246,0.633 0.05,1.022c-0.196,0.389 -0.294,0.632 -0.59,0.973c-0.296,0.341 -0.62,0.76 -0.886,1.022c-0.296,0.291 -0.603,0.606 -0.259,1.19c0.344,0.584 1.529,2.493 3.285,4.039c2.255,1.986 4.158,2.602 4.748,2.894c0.59,0.292 0.935,0.243 1.279,-0.146c0.344,-0.39 1.476,-1.703 1.869,-2.286c0.393,-0.583 0.787,-0.487 1.329,-0.292c0.542,0.194 3.445,1.604 4.035,1.896c0.59,0.292 0.984,0.438 1.132,0.681c0.148,0.242 0.148,1.41 -0.344,2.771z"></path></g></g>
+                    </svg>
+                </a>
+            </div>
+            <p class="text-gray-500 dark:text-gray-400" data-translate-key="copyright">
+                All rights reserved by AppDownDz
+            </p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+        <div class="modal glass-card rounded-2xl w-full max-w-md mx-auto shadow-2xl relative">
+            <button id="closeModalBtn" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <div class="p-8 text-center">
+                <div id="generatingState">
+                    <h3 class="text-2xl font-bold mb-2" data-translate-key="modal_generating_title">Generating Link...</h3>
+                    <p class="text-muted-color mb-6" data-translate-key="modal_generating_subtitle">Please wait a few moments.</p>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                        <div id="progressBar" class="main-gradient-bg h-2.5 rounded-full"></div>
+                    </div>
+                </div>
+                <div id="generatedState" class="hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-green-400 mx-auto mb-4"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    <h3 class="text-2xl font-bold mb-2" data-translate-key="modal_success_title">Link Generated Successfully!</h3>
+                    <p class="text-muted-color mb-6" data-translate-key="modal_success_subtitle">Click the button below to start using Canva Pro.</p>
+                    <button id="openLinkBtn" class="w-full main-gradient-bg text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105" data-translate-key="get_link">
+                        Get The Link
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const canvaLink = "https://www.canva.com/brand/join?token=Vxax6PzERCRaimBUBCsEBA&referrer=team-invite";
+
+            // --- EmailJS Initialization ---
+            (function() {
+                // IMPORTANT: Replace with your EmailJS Public Key
+                emailjs.init({ publicKey: "ve0kltmnNlIQEfRGw" });
+            })();
+
+            // --- Translations Data ---
+            const languages = {
+                en: { name: 'English', dir: 'ltr' }, ar: { name: 'العربية', dir: 'rtl' }, fr: { name: 'Français', dir: 'ltr' }, es: { name: 'Español', dir: 'ltr' }, pt: { name: 'Português', dir: 'ltr' }, hi: { name: 'हिन्दी', dir: 'ltr' }, tr: { name: 'Türkçe', dir: 'ltr' }, ru: { name: 'Русский', dir: 'ltr' },
+            };
+            const translations = {
+                en: { page_title: "Free Canva Pro - Get Your Link Now", dark_mode: "Dark Mode", light_mode: "Light Mode", main_title: 'Get <span class="main-gradient-text">Canva Pro</span> For Free', main_subtitle: "Join millions of users and get unlimited access to all Canva Pro features with a single click.", get_link_now: "Get The Link Now", why_us_title: "Why Choose Us?", feature1_title: "Instant & Secure", feature1_text: "Get your link in seconds. Our process is fully secure and respects your privacy.", feature2_title: "Full Features", feature2_text: "Enjoy all Canva Pro tools, including premium content, background eraser, and more.", feature3_title: "Always Free", feature3_text: "Our service is completely free. No hidden fees or subscriptions required.", copyright: "All rights reserved to AppDownDz", modal_generating_title: "Generating Link...", modal_generating_subtitle: "Please wait a few moments.", modal_success_title: "Link Generated Successfully!", modal_success_subtitle: "Click the button below to start using Canva Pro.", get_link: "Get The Link", },
+                ar: { page_title: "Canva Pro مجانًا - احصل على رابطك الآن", dark_mode: "الوضع الداكن", light_mode: "الوضع الفاتح", main_title: 'احصل على <span class="main-gradient-text">Canva Pro</span> مجانًا', main_subtitle: "انضم إلى ملايين المستخدمين واحصل على وصول غير محدود إلى جميع ميزات Canva Pro بنقرة زر واحدة.", get_link_now: "احصل على الرابط الآن", why_us_title: "لماذا تختارنا؟", feature1_title: "فوري وآمن", feature1_text: "احصل على رابطك في ثوانٍ. عمليتنا مؤمنة بالكامل وتحترم خصوصيتك.", feature2_title: "كامل الميزات", feature2_text: "استمتع بكل أدوات Canva Pro، بما في ذلك المحتوى المميز، وممحاة الخلفية، والمزيد.", feature3_title: "مجانًا دائمًا", feature3_text: "خدمتنا مجانية تمامًا. لا توجد رسوم خفية أو اشتراكات مطلوبة.", copyright: "جميع الحقوق محفوظة لدى AppDownDz", modal_generating_title: "جاري إنشاء الرابط...", modal_generating_subtitle: "يرجى الانتظار بضع لحظات.", modal_success_title: "تم إنشاء الرابط بنجاح!", modal_success_subtitle: "انقر على الزر أدناه للبدء في استخدام Canva Pro.", get_link: "الحصول على الرابط", },
+                fr: { page_title: "Canva Pro Gratuit - Obtenez Votre Lien", dark_mode: "Mode Sombre", light_mode: "Mode Clair", main_title: 'Obtenez <span class="main-gradient-text">Canva Pro</span> Gratuitement', main_subtitle: "Rejoignez des millions d'utilisateurs et obtenez un accès illimité à toutes les fonctionnalités de Canva Pro en un seul clic.", get_link_now: "Obtenir le lien", why_us_title: "Pourquoi nous choisir ?", feature1_title: "Instantané et Sécurisé", feature1_text: "Obtenez votre lien en quelques secondes. Notre processus est entièrement sécurisé et respecte votre vie privée.", feature2_title: "Fonctionnalités Complètes", feature2_text: "Profitez de tous les outils de Canva Pro, y compris le contenu premium, la gomme d'arrière-plan, et plus encore.", feature3_title: "Toujours Gratuit", feature3_text: "Notre service est entièrement gratuit. Pas de frais cachés ni d'abonnements requis.", copyright: "Tous droits réservés à AppDownDz", modal_generating_title: "Génération du lien...", modal_generating_subtitle: "Veuillez patienter.", modal_success_title: "Lien généré avec succès !", modal_success_subtitle: "Cliquez sur le bouton ci-dessous pour utiliser Canva Pro.", get_link: "Obtenir le lien", },
+                es: { page_title: "Canva Pro Gratis - Obtén tu Enlace", dark_mode: "Modo Oscuro", light_mode: "Modo Claro", main_title: 'Obtén <span class="main-gradient-text">Canva Pro</span> Gratis', main_subtitle: "Únete a millones de usuarios y obtén acceso ilimitado a todas las funciones de Canva Pro con un solo clic.", get_link_now: "Obtener el enlace", why_us_title: "¿Por qué elegirnos?", feature1_title: "Instantáneo y Seguro", feature1_text: "Obtén tu enlace en segundos. Nuestro proceso es totalmente seguro y respeta tu privacidad.", feature2_title: "Funciones Completas", feature2_text: "Disfruta de todas las herramientas de Canva Pro, incluido el contenido premium, el borrador de fondos y más.", feature3_title: "Siempre Gratis", feature3_text: "Nuestro servicio es completamente gratuito. Sin cargos ocultos ni suscripciones.", copyright: "Todos los derechos reservados a AppDownDz", modal_generating_title: "Generando enlace...", modal_generating_subtitle: "Por favor, espere.", modal_success_title: "¡Enlace generado con éxito!", modal_success_subtitle: "Haz clic en el botón de abajo para usar Canva Pro.", get_link: "Obtener el enlace", },
+                pt: { page_title: "Canva Pro Grátis - Obtenha seu Link", dark_mode: "Modo Escuro", light_mode: "Modo Claro", main_title: 'Obtenha <span class="main-gradient-text">Canva Pro</span> de Graça', main_subtitle: "Junte-se a milhões de usuários e tenha acesso ilimitado a todos os recursos do Canva Pro com um único clique.", get_link_now: "Obter o Link", why_us_title: "Por que nos escolher?", feature1_title: "Instantâneo e Seguro", feature1_text: "Obtenha seu link em segundos. Nosso processo é totalmente seguro e respeita sua privacidade.", feature2_title: "Recursos Completos", feature2_text: "Aproveite todas as ferramentas do Canva Pro, incluindo conteúdo premium, removedor de fundo e muito more.", feature3_title: "Sempre Grátis", feature3_text: "Nosso serviço é totalmente gratuito. Sem taxas ocultas ou assinaturas.", copyright: "Todos os direitos reservados para AppDownDz", modal_generating_title: "Gerando link...", modal_generating_subtitle: "Por favor, aguarde.", modal_success_title: "Link gerado com sucesso!", modal_success_subtitle: "Clique no botão abaixo para usar o Canva Pro.", get_link: "Obter o Link", },
+                hi: { page_title: "मुफ़्त कैनवा प्रो - अपना लिंक पाएं", dark_mode: "डार्क मोड", light_mode: "लाइट मोड", main_title: 'मुफ़्त में <span class="main-gradient-text">Canva Pro</span> पाएं', main_subtitle: "लाखों उपयोगकर्ताओं से जुड़ें और एक क्लिक में सभी कैनवा प्रो सुविधाओं तक असीमित पहुंच प्राप्त करें।", get_link_now: "लिंक पाएं", why_us_title: "हमें क्यों चुनें?", feature1_title: "तुरंत और सुरक्षित", feature1_text: "अपना लिंक सेकंडों में पाएं। हमारी प्रक्रिया पूरी तरह से सुरक्षित है और आपकी गोपनीयता का सम्मान करती है।", feature2_title: "पूरी सुविधाएँ", feature2_text: "प्रीमियम सामग्री, बैकग्राउंड रिमूवर, और बहुत कुछ सहित सभी कैनवा प्रो टूल का आनंद लें।", feature3_title: "हमेशा मुफ़्त", feature3_text: "हमारी सेवा पूरी तरह से मुफ़्त है। कोई छिपा हुआ शुल्क या सदस्यता नहीं।", copyright: "सर्वाधिकार AppDownDz के लिए आरक्षित", modal_generating_title: "लिंक बना रहा है...", modal_generating_subtitle: "कृपया प्रतीक्षा करें।", modal_success_title: "लिंक सफलतापूर्वक बन गया!", modal_success_subtitle: "कैनवा प्रो का उपयोग शुरू करने के लिए नीचे दिए गए बटन पर क्लिक करें।", get_link: "लिंक पाएं", },
+                tr: { page_title: "Ücretsiz Canva Pro - Bağlantınızı Alın", dark_mode: "Karanlık Mod", light_mode: "Aydınlık Mod", main_title: '<span class="main-gradient-text">Canva Pro</span>\'yu Ücretsiz Alın', main_subtitle: "Milyonlarca kullanıcıya katılın ve tek tıkla tüm Canva Pro özelliklerine sınırsız erişim sağlayın.", get_link_now: "Bağlantıyı Al", why_us_title: "Neden Bizi Seçmelisiniz?", feature1_title: "Anında ve Güvenli", feature1_text: "Bağlantınızı saniyeler içinde alın. Sürecimiz tamamen güvenlidir ve gizliliğinize saygı duyar.", feature2_title: "Tüm Özellikler", feature2_text: "Premium içerik, arka plan temizleyici ve daha fazlası dahil tüm Canva Pro araçlarının keyfini çıkarın.", feature3_title: "Her Zaman Ücretsiz", feature3_text: "Hizmetimiz tamamen ücretsizdir. Gizli ücret veya abonelik yoktur.", copyright: "Tüm hakları AppDownDz'ye aittir", modal_generating_title: "Bağlantı oluşturuluyor...", modal_generating_subtitle: "Lütfen bekleyin.", modal_success_title: "Bağlantı başarıyla oluşturuldu!", modal_success_subtitle: "Canva Pro'yu kullanmaya başlamak için aşağıdaki düğmeye tıklayın.", get_link: "Bağlantıyı Al", },
+                ru: { page_title: "Бесплатный Canva Pro - Получите ссылку", dark_mode: "Темный режим", light_mode: "Светлый режим", main_title: 'Получите <span class="main-gradient-text">Canva Pro</span> бесплатно', main_subtitle: "Присоединяйтесь к миллионам пользователей и получите неограниченный доступ ко всем функциям Canva Pro одним щелчком мыши.", get_link_now: "Получить ссылку", why_us_title: "Почему выбирают нас?", feature1_title: "Мгновенно и безопасно", feature1_text: "Получите вашу ссылку за секунды. Наш процесс полностью безопасен и уважает вашу конфиденциальность.", feature2_title: "Все функции", feature2_text: "Наслаждайтесь всеми инструментами Canva Pro, включая премиум-контент, удаление фона и многое другое.", feature3_title: "Всегда бесплатно", feature3_text: "Наш сервис абсолютно бесплатен. Никаких скрытых платежей или подписок.", copyright: "Все права защищены AppDownDz", modal_generating_title: "Создание ссылки...", modal_generating_subtitle: "Пожалуйста, подождите.", modal_success_title: "Ссылка успешно создана!", modal_success_subtitle: "Нажмите кнопку ниже, чтобы начать использовать Canva Pro.", get_link: "Получить ссылку", },
+            };
+            
+            const langMenu = document.getElementById('lang-menu');
+            const htmlEl = document.documentElement;
+
+            function changeLanguage(langCode) {
+                const langData = translations[langCode] || translations.en;
+                document.querySelectorAll('[data-translate-key]').forEach(el => {
+                    const key = el.getAttribute('data-translate-key');
+                    if (langData[key]) el.innerHTML = langData[key];
+                });
+                document.title = langData.page_title;
+                htmlEl.lang = langCode;
+                htmlEl.dir = languages[langCode].dir;
+            }
+
+            Object.keys(languages).forEach(code => {
+                const link = document.createElement('a');
+                link.href = '#';
+                link.textContent = languages[code].name;
+                link.className = 'block px-4 py-2 text-sm hover:bg-gray-500/20';
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    changeLanguage(code);
+                    document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.add('hidden'));
+                });
+                langMenu.appendChild(link);
+            });
+
+            function setupDropdown(buttonId, menuId) {
+                const button = document.getElementById(buttonId);
+                const menu = document.getElementById(menuId);
+                button.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    document.querySelectorAll('.dropdown-menu').forEach(m => {
+                        if (m.id !== menuId) m.classList.add('hidden');
+                    });
+                    menu.classList.toggle('hidden');
+                });
+            }
+            setupDropdown('lang-menu-button', 'lang-menu');
+            setupDropdown('theme-menu-button', 'theme-menu');
+            document.addEventListener('click', () => document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.add('hidden')));
+
+            const themeDarkBtn = document.getElementById('theme-dark');
+            const themeLightBtn = document.getElementById('theme-light');
+            const darkIcon = document.getElementById('theme-icon-dark');
+            const lightIcon = document.getElementById('theme-icon-light');
+
+            const applyTheme = (theme) => {
+                if (theme === 'light') {
+                    htmlEl.classList.add('light');
+                    htmlEl.classList.remove('dark');
+                    lightIcon.classList.remove('hidden');
+                    darkIcon.classList.add('hidden');
+                } else {
+                    htmlEl.classList.remove('light');
+                    htmlEl.classList.add('dark');
+                    darkIcon.classList.remove('hidden');
+                    lightIcon.classList.add('hidden');
+                }
+            };
+            themeLightBtn.addEventListener('click', (e) => { e.preventDefault(); applyTheme('light'); });
+            themeDarkBtn.addEventListener('click', (e) => { e.preventDefault(); applyTheme('dark'); });
+
+            const getLinkBtn = document.getElementById('getLinkBtn');
+            const modal = document.getElementById('modal');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const generatingState = document.getElementById('generatingState');
+            const generatedState = document.getElementById('generatedState');
+            const progressBar = document.getElementById('progressBar');
+            const openLinkBtn = document.getElementById('openLinkBtn');
+
+            getLinkBtn.addEventListener('click', () => {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                generatingState.classList.remove('hidden');
+                generatedState.classList.add('hidden');
+                progressBar.classList.remove('progress-bar-animated');
+                void progressBar.offsetWidth;
+                progressBar.classList.add('progress-bar-animated');
+                setTimeout(() => {
+                    generatingState.classList.add('hidden');
+                    generatedState.classList.remove('hidden');
+                }, 3500);
+            });
+
+            const closeModal = () => modal.classList.add('hidden');
+            closeModalBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+            
+            openLinkBtn.addEventListener('click', () => {
+                // Send email via EmailJS
+                emailjs.send("service_isy639u", "template_9eb0grf")
+                    .then(function(response) {
+                       console.log('EmailJS SUCCESS!', response.status, response.text);
+                    }, function(error) {
+                       console.log('EmailJS FAILED...', error);
+                    });
+
+                // Open the Canva link
+                window.open(canvaLink, '_blank');
+            });
+
+            const featuresContainer = document.getElementById('features-container');
+            const features = [
+                { icon: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-purple-400"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>', key_title: 'feature1_title', key_text: 'feature1_text' },
+                { icon: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-blue-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>', key_title: 'feature2_title', key_text: 'feature2_text' },
+                { icon: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-pink-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>', key_title: 'feature3_title', key_text: 'feature3_text' }
+            ];
+            
+            features.forEach(feature => {
+                const card = document.createElement('div');
+                card.className = 'glass-card p-6 rounded-xl text-center flex flex-col items-center';
+                card.innerHTML = `
+                    <div class="p-3 mb-4 bg-gray-500/10 rounded-full">${feature.icon}</div>
+                    <h3 class="text-xl font-bold mb-2" data-translate-key="${feature.key_title}"></h3>
+                    <p class="text-muted-color" data-translate-key="${feature.key_text}"></p>
+                `;
+                featuresContainer.appendChild(card);
+            });
+
+            const spotlight = document.getElementById('spotlight');
+            document.addEventListener('mousemove', (e) => {
+                spotlight.style.left = e.clientX + 'px';
+                spotlight.style.top = e.clientY + 'px';
+            });
+
+            applyTheme('dark');
+            changeLanguage('ar');
+        });
+    </script>
+</body>
+</html>
